@@ -25,8 +25,8 @@ jobs:
         uses: actions/setup-node@2-beta
         with: 
           node-version: 12
-        name: Install Surge
+      - name: Install Surge
         run: npm -g install surge
-        name: Run Surge
-        run: surge ./ bootcampnewapp.surge.sh --token ${{secret.PROJECT1_SURGE_TOKEN}}
+      - name: Run Surge
+        run: surge ./ bootcampnewapp.surge.sh --token ${{secrets.PROJECT1_SURGE_TOKEN}}
      
